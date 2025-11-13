@@ -1,0 +1,8 @@
+{
+   "servername":"localhost",
+   "server":"10.50.15.82",
+   "user":"tmp_localuser",
+   "pass":"password123456",
+   "DB":"K2_eServices",
+   "driver":"{SQL Server}"
+}

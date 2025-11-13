@@ -1,5 +1,15 @@
 import json
-from sample_payload import *
+from DB_layer import *
 
-vendor_input_OBJ=json.load(input_payload)
-print(vendor_input_OBJ)
+with open('sample_payload.json', "r", encoding="utf-8") as f:
+    vendorsObj = json.load(f)
+
+
+#print(vendorsObj["value"])
+
+select_from_table("SELECT * FROM [OBB_K2_ETendering].[Vendors].[RegisteredVendors]")
+
+for vendor in vendorsObj["value"]:
+    print(vendor["VendorAccountNumber"])
+
+
