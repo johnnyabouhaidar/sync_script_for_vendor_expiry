@@ -35,6 +35,13 @@ def insert_into_table(query):
     con.commit()
     return res
 
+def update_into_table(query):
+    con,cur=initialize_connection()
+    cur.execute(query)
+    #res = cur.fetchone()[0]
+    con.commit()
+    return True    
+
 def insert_into_table_no_generated_ID(query):
     con,cur=initialize_connection()
     cur.execute(query)
